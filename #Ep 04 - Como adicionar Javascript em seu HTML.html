@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de IMC</title>
+    <script>
+        // type = "test/JavaScript"
+        const calculaImc = () => {
+            const altura = document.imcForm.elements["altura"].value;
+            const peso = document.imcForm.elements["peso"].value;
+            const imc = peso / (altura * altura);
+            if (imc < 18.5) {
+                alert("Voçê está abaixo do peso:")
+            } else if (imc >= 18.5 && imc < 25) {
+                alert("Voçê está com peso normal");
+            } else if (imc >= 25 && imc < 30) {
+                alert("Voçê está com sobrepeso");
+            } else if (imc >= 30 && imc < 40) {
+                alert("Voçê está com obesidade");
+            } else if (imc >= 40) {
+                alert("Voçê está com obesidade grave");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <img src="C:\Abraão\Imagens\Outros\IMC.jpg" alt="" width="300px">
+    <br>
+    <h1>Calculadora de IMC</h1>
+    <form id="imcForm" name="imcForm" action="#">
+        <label for="altura">Insira a altura:</label>
+        <input type="test" id="altura" name="altura">
+        <br><br>
+        <label for="peso">Insira o peso</label>
+        <input type="test" id="peso" name="peso">
+        <br><br>
+        <input type="submit" value="Calcular" onclick="calculaImc()">
+    </form>
+   
+</body>
+
+</html>
